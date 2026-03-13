@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        Video v1 = new Video("Ciao belli", 5, 5, 3);
+        //     Video v1 = new Video("Ciao belli", 5, 5, 3);
 
         //L'UTENTE SELEZIONA LA CLASSE E COMPILA L'OGGETTO VUOTO
 //        System.out.println("Cosa vuoi guardare o riprodurre oggi? 1.Immagine 2.Video 3.Audio");
