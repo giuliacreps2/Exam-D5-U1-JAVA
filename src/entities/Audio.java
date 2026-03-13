@@ -13,6 +13,10 @@ public class Audio extends ElementoMultimediale implements Volume {
         this.volume = volume;
     }
 
+    public Audio() {
+
+    }
+
     //SETTER
     public void setDurata(int durata) {
         this.durata = durata;

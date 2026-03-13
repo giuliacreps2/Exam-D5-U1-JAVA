@@ -8,8 +8,17 @@ public abstract class ElementoMultimediale {
         this.titolo = titolo;
     }
 
+    public ElementoMultimediale() {
+
+    }
+
     //GETTER
     public String getTitolo() {
         return titolo;
+    }
+
+    //SETTER
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
     }
 }

@@ -11,6 +11,10 @@ public class Immagine extends ElementoMultimediale implements Luminosità {
         this.luminosità = luminosità;
     }
 
+    public Immagine() {
+
+    }
+
     //SETTER
     public void setLuminosità(int luminosità) {
         this.luminosità = luminosità;
