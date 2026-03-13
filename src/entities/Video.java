@@ -33,30 +33,31 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
         System.out.println("Nuova durata inserita" + volume);
     }
 
-    public void setLuminosità()
+    public void setLuminosità(int luminosità) {
+        if (luminosità < 0)
+            System.out.println("Errore nella scelta della luminosità del video. Usa un nuovo valore da 1 a 10");
+        Scanner scanner = new Scanner(System.in);
+        luminosità = scanner.nextInt();
+        System.out.println("Nuova durata inserita" + luminosità);
+    }
 
 
     //METODI
     public void play(String titolo, int durata, int volume, int luminosità) {
         for (int i = 0; i <= durata; i++) {
-            System.out.println(titolo.repeat(i));
+            //System.out.println(titolo.repeat(i));
             for (int j = 0; j <= volume; i++) {
                 String str = "|";
-                System.out.println(str.repeat(j));
+                //System.out.println(str.repeat(j));
+                for (int k = 0; k <= luminosità; i++) {
+                    String str1 = "*";
+                    // System.out.println(str1.repeat(k));
+                    System.out.println(titolo + " " + str.repeat(j) + " " + str1.repeat(k));
+                }
             }
         }
     }
 
-
-    @Override
-    public void abbassaVolume(int durata, int volume) {
-        Volume.super.abbassaVolume(durata, volume);
-    }
-
-    @Override
-    public void alzaVolume(int durata, int volume) {
-        Volume.super.alzaVolume(durata, volume);
-    }
 
     @Override
     public void aumentaLuminosità() {
@@ -68,6 +69,17 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
 
     }
 
+
+    @Override
+    public void alzaVolume() {
+
+    }
+
+    @Override
+    public void abbassaVolume() {
+
+    }
+
     @Override
     public String toString() {
         return "Video{" +
@@ -76,5 +88,6 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
                 ", luminosità=" + luminosità +
                 '}';
     }
+
 }
 
