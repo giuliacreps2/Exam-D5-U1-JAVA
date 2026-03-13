@@ -33,12 +33,8 @@ public class Audio extends ElementoMultimediale implements Volume {
     //METODI
     public void play(String titolo, int durata, int volume) {
         for (int i = 0; i <= durata; i++) {
-            //System.out.println(titolo.repeat(i));
-            for (int j = 0; j <= volume; i++) {
-                String str = "|";
-                //System.out.println(str.repeat(j));
-                System.out.println(titolo + " " + str.repeat(j));
-            }
+            String str = "|";
+            System.out.println(titolo.concat(str.repeat(volume)));
         }
     }
 
@@ -60,5 +56,6 @@ public class Audio extends ElementoMultimediale implements Volume {
                 '}';
     }
 }
+
 
 

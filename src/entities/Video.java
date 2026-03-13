@@ -44,39 +44,12 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
 
     //METODI
     public void play(String titolo, int durata, int volume, int luminosità) {
-        for (int i = 0; i <= durata; i++) {
-            //System.out.println(titolo.repeat(i));
-            for (int j = 0; j <= volume; i++) {
-                String str = "|";
-                //System.out.println(str.repeat(j));
-                for (int k = 0; k <= luminosità; i++) {
-                    String str1 = "*";
-                    // System.out.println(str1.repeat(k));
-                    System.out.println(titolo + " " + str.repeat(j) + " " + str1.repeat(k));
-                }
-            }
+        for (int i = 1; i <= durata; i++) {
+            String str = "|";
+            String str1 = "*";
+            System.out.println(titolo.concat(str.repeat(volume) + str1.repeat(luminosità)));
         }
-    }
 
-
-    @Override
-    public void aumentaLuminosità() {
-
-    }
-
-    @Override
-    public void diminuisciLuminosità() {
-
-    }
-
-
-    @Override
-    public void alzaVolume() {
-
-    }
-
-    @Override
-    public void abbassaVolume() {
 
     }
 
@@ -89,5 +62,23 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
                 '}';
     }
 
-}
+    @Override
+    public void aumentaLuminosità() {
 
+    }
+
+    @Override
+    public void diminuisciLuminosità() {
+
+    }
+
+    @Override
+    public void alzaVolume() {
+
+    }
+
+    @Override
+    public void abbassaVolume() {
+
+    }
+}

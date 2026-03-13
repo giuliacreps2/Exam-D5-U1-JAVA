@@ -22,6 +22,11 @@ public class Immagine extends ElementoMultimediale implements Luminosità {
         System.out.println("Nuova durata inserita" + luminosità);
     }
 
+    //METODI
+    public void show(String titolo, int luminosità) {
+        String str = "*";
+        System.out.println(titolo + (str.repeat(luminosità)));
+    }
 
     @Override
     public void aumentaLuminosità() {
@@ -32,4 +37,12 @@ public class Immagine extends ElementoMultimediale implements Luminosità {
     public void diminuisciLuminosità() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Immagine{" +
+                "luminosità=" + luminosità +
+                '}';
+    }
 }
+
