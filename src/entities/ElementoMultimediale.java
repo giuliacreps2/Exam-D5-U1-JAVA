@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.Scanner;
+
 public abstract class ElementoMultimediale {
     private String titolo;
 
@@ -21,4 +23,7 @@ public abstract class ElementoMultimediale {
     public void setTitolo(String titolo) {
         this.titolo = titolo;
     }
+
+    //METODI
+    public abstract void inserisciDati(Scanner scanner);
 }

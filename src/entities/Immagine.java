@@ -2,6 +2,8 @@ package entities;
 
 import interfaces.Luminosità;
 
+import java.util.Scanner;
+
 public class Immagine extends ElementoMultimediale implements Luminosità {
     private int luminosità;
 
@@ -15,7 +17,12 @@ public class Immagine extends ElementoMultimediale implements Luminosità {
 
     }
 
+
     //SETTER
+    public void setTitolo(String titolo) {
+        this.setTitolo(titolo);
+    }
+
     public void setLuminosità(int luminosità) {
         this.luminosità = luminosità;
     }
@@ -24,6 +31,15 @@ public class Immagine extends ElementoMultimediale implements Luminosità {
     public void show(String titolo, int luminosità) {
         String str = "*";
         System.out.println(titolo + (str.repeat(luminosità)));
+    }
+
+
+    @Override
+    public void inserisciDati(Scanner scanner) {
+        System.out.println("Scrivi il titolo");
+        this.setTitolo(scanner.nextLine());
+        System.out.println("Inserisci il valore della luminosità da 1 a 10");
+        this.luminosità = Integer.parseInt(scanner.nextLine());
     }
 
     @Override
@@ -39,6 +55,7 @@ public class Immagine extends ElementoMultimediale implements Luminosità {
     @Override
     public String toString() {
         return "Immagine{" +
+                "titolo=" + getTitolo() +
                 "luminosità=" + luminosità +
                 '}';
     }

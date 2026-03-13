@@ -3,7 +3,7 @@ import entities.ElementoMultimediale;
 import entities.Immagine;
 import entities.Video;
 
-import java.util.Objects;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -13,42 +13,56 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Video v1 = new Video("Ciao belli", 5, 5, 3);
 
-        //L'UTENTE SELEZIONA LA CLASSE
+        //L'UTENTE SELEZIONA LA CLASSE E COMPILA L'OGGETTO VUOTO
         System.out.println("Cosa vuoi guardare o riprodurre oggi? 1.Immagine 2.Video 3.Audio");
-        int scelta = scanner.nextInt();
-        ElementoMultimediale multimedia = null;
+        int scelta = Integer.parseInt(scanner.nextLine());
 
-        switch (scelta) {
-            case 1:
-                multimedia = new Immagine();
-                System.out.println(multimedia);
-                break;
-            case 2:
-                multimedia = new Video();
-                System.out.println(multimedia);
-                break;
-            case 3:
-                multimedia = new Audio();
-                System.out.println(multimedia);
-                break;
-            default:
-                multimedia = null;
-                System.out.println("Scelta non valida");
+        ElementoMultimediale multimedia;
 
+//        switch (scelta) {
+//            case 1:
+//                multimedia = new Immagine();
+//                multimedia.inserisciDati(scanner);
+//                break;
+//            case 2:
+//                multimedia = new Video();
+//                multimedia.inserisciDati(scanner);
+//                break;
+//            case 3:
+//                multimedia = new Audio();
+//                multimedia.inserisciDati(scanner);
+//                break;
+//            default:
+//                multimedia = null;
+//                System.out.println("Scelta non valida");
+//        }
+
+        //INSERISCO L'OGGETTO VUOTO NELL'ARRAY
+
+        ArrayList<ElementoMultimediale> catalogoMultimediale = new ArrayList<>();
+
+        for (int i = 0; i < 2; i++) {
+            switch (scelta) {
+                case 1:
+                    multimedia = new Immagine();
+                    multimedia.inserisciDati(scanner);
+                    break;
+                case 2:
+                    multimedia = new Video();
+                    multimedia.inserisciDati(scanner);
+                    break;
+                case 3:
+                    multimedia = new Audio();
+                    multimedia.inserisciDati(scanner);
+                    break;
+                default:
+                    multimedia = null;
+                    System.out.println("Scelta non valida");
+            }
+            catalogoMultimediale.add(multimedia);
         }
 
-        //L'UTENTE COMPILA L'OGGETTO VUOTO
-          public void inserisciDati(){
-            if (multimedia == new Video()){
-            System.out.println("Scrivi il titolo");
-            String titolo = scanner.nextLine();
-            System.out.println("Inserisci la durata del video da 1 a 10");
-            int durata = scanner.nextInt();
-            System.out.println("Inserisci il volume da 1 a 10");
-            int volume = scanner.nextInt();
-            System.out.println("Inserisci il valore della luminosità da 1 a 10");
-            int luminosità = scanner.nextInt();
-        }
+        System.out.println(catalogoMultimediale);
 
 //        System.out.println("Inserisci il titolo");
 //        String titolo = scanner.nextLine();

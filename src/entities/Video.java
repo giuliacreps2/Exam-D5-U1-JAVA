@@ -3,6 +3,8 @@ package entities;
 import interfaces.Luminosità;
 import interfaces.Volume;
 
+import java.util.Scanner;
+
 public class Video extends ElementoMultimediale implements Volume, Luminosità {
     private int durata;
     private int volume;
@@ -17,12 +19,12 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
     }
 
     public Video() {
-        
+
     }
 
     //SETTER
     public void setTitolo(String titolo) {
-        titolo = titolo;
+        this.setTitolo(titolo);
     }
 
     public void setDurata(int durata) {
@@ -48,8 +50,22 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
     }
 
     @Override
+    public void inserisciDati(Scanner scanner) {
+        System.out.println("Scrivi il titolo");
+        this.setTitolo(scanner.nextLine());
+        System.out.println("Inserisci la durata del video da 1 a 10");
+        this.durata = Integer.parseInt(scanner.nextLine());
+        System.out.println("Inserisci il volume da 1 a 10");
+        this.volume = Integer.parseInt(scanner.nextLine());
+        System.out.println("Inserisci il valore della luminosità da 1 a 10");
+        this.luminosità = Integer.parseInt(scanner.nextLine());
+
+    }
+
+    @Override
     public String toString() {
         return "Video{" +
+                "titolo=" + getTitolo() +
                 "durata=" + durata +
                 ", volume=" + volume +
                 ", luminosità=" + luminosità +

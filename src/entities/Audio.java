@@ -2,6 +2,8 @@ package entities;
 
 import interfaces.Volume;
 
+import java.util.Scanner;
+
 public class Audio extends ElementoMultimediale implements Volume {
     private int durata;
     private int volume;
@@ -17,7 +19,21 @@ public class Audio extends ElementoMultimediale implements Volume {
 
     }
 
+    @Override
+    public void inserisciDati(Scanner scanner) {
+        System.out.println("Scrivi il titolo");
+        this.setTitolo(scanner.nextLine());
+        System.out.println("Inserisci la durata del video da 1 a 10");
+        this.durata = Integer.parseInt(scanner.nextLine());
+        System.out.println("Inserisci il volume da 1 a 10");
+        this.volume = Integer.parseInt(scanner.nextLine());
+    }
+
     //SETTER
+    public void setTitolo(String titolo) {
+        this.setTitolo(titolo);
+    }
+    
     public void setDurata(int durata) {
         this.durata = durata;
     }
@@ -47,6 +63,7 @@ public class Audio extends ElementoMultimediale implements Volume {
     @Override
     public String toString() {
         return "Audio{" +
+                "titolo=" + getTitolo() +
                 "durata=" + durata +
                 ", volume=" + volume +
                 '}';
