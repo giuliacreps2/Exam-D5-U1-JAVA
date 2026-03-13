@@ -2,8 +2,6 @@ package entities;
 
 import interfaces.Volume;
 
-import java.util.Scanner;
-
 public class Audio extends ElementoMultimediale implements Volume {
     private int durata;
     private int volume;
@@ -17,17 +15,11 @@ public class Audio extends ElementoMultimediale implements Volume {
 
     //SETTER
     public void setDurata(int durata) {
-        if (durata < 0) System.out.println("Errore nella scelta della durata del video. Usa un nuovo valore da 1 a 10");
-        Scanner scanner = new Scanner(System.in);
-        durata = scanner.nextInt();
-        System.out.println("Nuova durata inserita" + durata);
+        this.durata = durata;
     }
 
     public void setVolume(int volume) {
-        if (volume < 0) System.out.println("Errore nella scelta del volume del video. Usa un nuovo valore da 1 a 10");
-        Scanner scanner = new Scanner(System.in);
-        volume = scanner.nextInt();
-        System.out.println("Nuova durata inserita" + volume);
+        this.volume = volume;
     }
 
     //METODI

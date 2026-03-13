@@ -22,6 +22,15 @@ public class Main {
         //System.out.println(v1);
 
 
+//
+//        public void setVolume(int volume) {
+//            if (volume < 0) System.out.println("Errore nella scelta del volume del video. Usa un nuovo valore da 1 a 10");
+//            Scanner scanner = new Scanner(System.in);
+//            volume = scanner.nextInt();
+//            System.out.println("Nuova durata inserita" + volume);
+//        }
+
+
     }
 }
 

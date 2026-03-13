@@ -3,8 +3,6 @@ package entities;
 import interfaces.Luminosità;
 import interfaces.Volume;
 
-import java.util.Scanner;
-
 public class Video extends ElementoMultimediale implements Volume, Luminosità {
     private int durata;
     private int volume;
@@ -20,25 +18,15 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
 
     //SETTER
     public void setDurata(int durata) {
-        if (durata < 0) System.out.println("Errore nella scelta della durata del video. Usa un nuovo valore da 1 a 10");
-        Scanner scanner = new Scanner(System.in);
-        durata = scanner.nextInt();
-        System.out.println("Nuova durata inserita" + durata);
+        this.durata = durata;
     }
 
     public void setVolume(int volume) {
-        if (volume < 0) System.out.println("Errore nella scelta del volume del video. Usa un nuovo valore da 1 a 10");
-        Scanner scanner = new Scanner(System.in);
-        volume = scanner.nextInt();
-        System.out.println("Nuova durata inserita" + volume);
+        this.volume = volume;
     }
 
     public void setLuminosità(int luminosità) {
-        if (luminosità < 0)
-            System.out.println("Errore nella scelta della luminosità del video. Usa un nuovo valore da 1 a 10");
-        Scanner scanner = new Scanner(System.in);
-        luminosità = scanner.nextInt();
-        System.out.println("Nuova durata inserita" + luminosità);
+        this.luminosità = luminosità;
     }
 
 
@@ -49,8 +37,6 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
             String str1 = "*";
             System.out.println(titolo.concat(str.repeat(volume) + str1.repeat(luminosità)));
         }
-
-
     }
 
     @Override
