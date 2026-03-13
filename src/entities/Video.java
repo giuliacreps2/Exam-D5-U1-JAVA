@@ -23,10 +23,6 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
     }
 
     //SETTER
-    public void setTitolo(String titolo) {
-        this.setTitolo(titolo);
-    }
-
     public void setDurata(int durata) {
         this.durata = durata;
     }

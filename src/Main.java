@@ -14,8 +14,8 @@ public class Main {
         Video v1 = new Video("Ciao belli", 5, 5, 3);
 
         //L'UTENTE SELEZIONA LA CLASSE E COMPILA L'OGGETTO VUOTO
-        System.out.println("Cosa vuoi guardare o riprodurre oggi? 1.Immagine 2.Video 3.Audio");
-        int scelta = Integer.parseInt(scanner.nextLine());
+//        System.out.println("Cosa vuoi guardare o riprodurre oggi? 1.Immagine 2.Video 3.Audio");
+//        int scelta = Integer.parseInt(scanner.nextLine());
 
         ElementoMultimediale multimedia;
 
@@ -41,7 +41,12 @@ public class Main {
 
         ArrayList<ElementoMultimediale> catalogoMultimediale = new ArrayList<>();
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Cosa vuoi aggiungere? 1.Immagine 2.Video 3.Audio 0.Esci");
+            int scelta = Integer.parseInt(scanner.nextLine());
+
+            if (scelta == 0) break;
+
             switch (scelta) {
                 case 1:
                     multimedia = new Immagine();

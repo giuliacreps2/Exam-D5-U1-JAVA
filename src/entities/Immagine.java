@@ -19,10 +19,6 @@ public class Immagine extends ElementoMultimediale implements Luminosità {
 
 
     //SETTER
-    public void setTitolo(String titolo) {
-        this.setTitolo(titolo);
-    }
-
     public void setLuminosità(int luminosità) {
         this.luminosità = luminosità;
     }
