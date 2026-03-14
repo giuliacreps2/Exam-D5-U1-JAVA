@@ -53,14 +53,14 @@ public class Main2 {
 
             if (scelta == 0) break;
 
-            ElementoMultimediale elemento = catalogoMultimediale.get(scelta - 1);
+            multimedia = catalogoMultimediale.get(scelta - 1);
 
-            if (elemento instanceof Video) {
-                ((Video) elemento).play();
-            } else if (elemento instanceof Audio) {
-                ((Audio) elemento).play();
-            } else if (elemento instanceof Immagine) {
-                ((Immagine) elemento).show();
+            if (multimedia instanceof Video) {
+                ((Video) multimedia).play();
+            } else if (multimedia instanceof Audio) {
+                ((Audio) multimedia).play();
+            } else if (multimedia instanceof Immagine) {
+                ((Immagine) multimedia).show();
             }
         }
     }
