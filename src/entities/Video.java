@@ -45,6 +45,14 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità {
         }
     }
 
+    
+    public void play() {
+        for (int i = 1; i <= this.durata; i++) {
+            System.out.println(this.getTitolo() + "|".repeat(this.volume) + "*".repeat(this.luminosità));
+        }
+    }
+
+
     @Override
     public void inserisciDati(Scanner scanner) {
         System.out.println("Scrivi il titolo");

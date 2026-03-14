@@ -29,6 +29,11 @@ public class Immagine extends ElementoMultimediale implements Luminosità {
         System.out.println(titolo + (str.repeat(luminosità)));
     }
 
+    public void show() {
+        String str = "*";
+        System.out.println(getTitolo() + (str.repeat(luminosità)));
+    }
+
 
     @Override
     public void inserisciDati(Scanner scanner) {

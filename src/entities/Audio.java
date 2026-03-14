@@ -23,8 +23,6 @@ public class Audio extends ElementoMultimediale implements Volume {
     public void inserisciDati(Scanner scanner) {
         System.out.println("Scrivi il titolo");
         this.setTitolo(scanner.nextLine());
-        System.out.println("Inserisci la durata del video da 1 a 10");
-        this.durata = Integer.parseInt(scanner.nextLine());
         System.out.println("Inserisci il volume da 1 a 10");
         this.volume = Integer.parseInt(scanner.nextLine());
     }
@@ -43,6 +41,13 @@ public class Audio extends ElementoMultimediale implements Volume {
         for (int i = 0; i <= durata; i++) {
             String str = "|";
             System.out.println(titolo.concat(str.repeat(volume)));
+        }
+    }
+
+    public void play() {
+        for (int i = 0; i <= durata; i++) {
+            String str = "|";
+            System.out.println(this.getTitolo().concat(str.repeat(volume)));
         }
     }
 
